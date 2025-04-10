@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Funcionários</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    form { margin-bottom: 20px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Cadastro de Funcionários</h1>
+  <form id="formFuncionario">
+    <label>Nome: <input type="text" id="nome" required></label><br><br>
+    <label>Idade: <input type="number" id="idade" required></label><br><br>
+    <label>Cargo:
+      <select id="cargo" required>
+        <option value="">Selecione</option>
+        <option value="gerente">Gerente</option>
+        <option value="desenvolvedor">Desenvolvedor</option>
+      </select>
+    </label><br><br>
+    <div id="campoEspecial" class="hidden">
+      <label id="labelEspecial"></label>
+      <input type="text" id="inputEspecial">
+    </div><br>
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <h2>Funcionários Cadastrados</h2>
+  <ul id="listaFuncionarios"></ul>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
